@@ -1,5 +1,14 @@
-var H5P = H5P || {};
+const HelpTextDialog = require('./HelpDialog');
+const MessageDialog = require('./MessageDialog');
+const ProgressCircle = require('./ProgressCircle');
+const ProgressBar = require('./ProgressBar');
+const ScoreBar = require('./ScoreBar');
+const Slider = require('./Slider');
+const SpeechBubble = require('./SpeechBubble');
+const Throbber = require('./Throbber');
+const Tip = require('./Tip');
 
+const H5P = {};
 /**
  * H5P Joubel UI library.
  *
@@ -8,7 +17,6 @@ var H5P = H5P || {};
  * @module
  */
 H5P.JoubelUI = (function ($) {
-
   /**
    * The internal object to return
    * @class H5P.JoubelUI
@@ -23,10 +31,10 @@ H5P.JoubelUI = (function ($) {
    * @method H5P.JoubelUI.createTip
    * @param  {string}  text   The textual tip
    * @param  {Object}  params Parameters
-   * @return {H5P.JoubelTip}
+   * @return {Tip}
    */
   JoubelUI.createTip = function (text, params) {
-    return new H5P.JoubelTip(text, params);
+    return new Tip(text, params);
   };
 
   /**
@@ -34,10 +42,10 @@ H5P.JoubelUI = (function ($) {
    * @method H5P.JoubelUI.createMessageDialog
    * @param  {H5P.jQuery}               $container The dom container
    * @param  {string}                   message    The message
-   * @return {H5P.JoubelMessageDialog}
+   * @return {MessageDialog}
    */
   JoubelUI.createMessageDialog = function ($container, message) {
-    return new H5P.JoubelMessageDialog($container, message);
+    return new MessageDialog($container, message);
   };
 
   /**
@@ -49,7 +57,7 @@ H5P.JoubelUI = (function ($) {
    * @return {H5P.JoubelHelpTextDialog}
    */
   JoubelUI.createHelpTextDialog = function (header, message, closeButtonTitle) {
-    return new H5P.JoubelHelpTextDialog(header, message, closeButtonTitle);
+    return new HelpTextDialog(header, message, closeButtonTitle);
   };
 
   /**
@@ -62,16 +70,16 @@ H5P.JoubelUI = (function ($) {
    * @return {H5P.JoubelProgressCircle}
    */
   JoubelUI.createProgressCircle = function (number, progressColor, fillColor, backgroundColor) {
-    return new H5P.JoubelProgressCircle(number, progressColor, fillColor, backgroundColor);
+    return new ProgressCircle(number, progressColor, fillColor, backgroundColor);
   };
 
   /**
    * Create throbber for loading
    * @method H5P.JoubelUI.createThrobber
-   * @return {H5P.JoubelThrobber}
+   * @return {Throbber}
    */
   JoubelUI.createThrobber = function () {
-    return new H5P.JoubelThrobber();
+    return new Throbber();
   };
 
   /**
@@ -88,10 +96,10 @@ H5P.JoubelUI = (function ($) {
    * Create Slider
    * @method H5P.JoubelUI.createSlider
    * @param  {Object} [params] Parameters
-   * @return {H5P.JoubelSlider}
+   * @return {Slider}
    */
   JoubelUI.createSlider = function (params) {
-    return new H5P.JoubelSlider(params);
+    return new Slider(params);
   };
 
   /**
@@ -99,14 +107,14 @@ H5P.JoubelUI = (function ($) {
    * @method H5P.JoubelUI.createScoreBar
    * @param  {number=}       maxScore The maximum score
    * @param {string} [label] Makes it easier for readspeakers to identify the scorebar
-   * @return {H5P.JoubelScoreBar}
+   * @return {ScoreBar}
    */
   JoubelUI.createScoreBar = function (maxScore, label, helpText, scoreExplanationButtonLabel) {
-    return new H5P.JoubelScoreBar(maxScore, label, helpText, scoreExplanationButtonLabel);
+    return new ScoreBar(maxScore, label, helpText, scoreExplanationButtonLabel);
   };
 
   /**
-   * Create Progressbar
+   * Create ProgressBar
    * @method H5P.JoubelUI.createProgressbar
    * @param  {number=}       numSteps The total numer of steps
    * @param {Object} [options] Additional options
@@ -114,10 +122,10 @@ H5P.JoubelUI = (function ($) {
    * @param {string} [options.progressText] A progress text for describing
    *  current progress out of total progress for readspeakers.
    *  e.g. "Slide :num of :total"
-   * @return {H5P.JoubelProgressbar}
+   * @return {ProgressBar}
    */
   JoubelUI.createProgressbar = function (numSteps, options) {
-    return new H5P.JoubelProgressbar(numSteps, options);
+    return new ProgressBar(numSteps, options);
   };
 
   /**
@@ -181,3 +189,5 @@ H5P.JoubelUI = (function ($) {
 
   return JoubelUI;
 })(H5P.jQuery);
+
+export default H5P;
