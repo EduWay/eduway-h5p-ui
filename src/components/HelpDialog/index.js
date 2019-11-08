@@ -2,7 +2,7 @@
  * Class responsible for creating a help text dialog
  */
 import $ from 'jquery';
-import { EventDispatcher } from '../h5p-event-dispatcher';
+import EventDispatcher from '../../EventDispatcher';
 
 import './styles.css';
 
@@ -89,7 +89,5 @@ function HelpTextDialog(header, message, closeButtonTitle) {
 
 HelpTextDialog.prototype = Object.create(EventDispatcher.prototype);
 HelpTextDialog.prototype.constructor = HelpTextDialog;
-
-return HelpTextDialog;
 
 export default HelpTextDialog;

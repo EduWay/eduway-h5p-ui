@@ -1,6 +1,6 @@
 import $ from 'jquery';
-import { EventDispatcher } from '../h5p-event-dispatcher';
-import './style.css';;
+import EventDispatcher from '../../EventDispatcher';
+import './style.css';
 
 /**
  * Joubel progressbar class

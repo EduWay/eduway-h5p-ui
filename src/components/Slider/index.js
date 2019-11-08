@@ -1,6 +1,6 @@
 import $ from 'jquery';
-import { EventDispatcher } from './EventDispatcher';
-import Transition from './Transition';
+import EventDispatcher from '../../EventDispatcher';
+import Transition from '../../Transition';
 
 import './style.css';
 
@@ -94,4 +94,4 @@ Slider.prototype.last = function () {
   this.move(this.numSlides-1);
 };
 
-export module Slider;
+export default Slider;
