@@ -1,4 +1,5 @@
-const $ = require('jquery');
+import $ from 'jquery';
+import './style.css';
 
 /**
  * Display a pop-up containing a message.

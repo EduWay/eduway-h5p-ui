@@ -1,6 +1,8 @@
-const $ = require('jquery');
-const { EventDispatcher } = require('./EventDispatcher');
-const Transition = require('./Transition');
+import $ from 'jquery';
+import { EventDispatcher } from './EventDispatcher';
+import Transition from './Transition';
+
+import './style.css';
 
 /**
  * Creates a new Slider

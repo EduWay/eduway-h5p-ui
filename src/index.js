@@ -8,6 +8,9 @@ const SpeechBubble = require('./SpeechBubble');
 const Throbber = require('./Throbber');
 const Tip = require('./Tip');
 
+import './styles.css';
+import './icons.css';
+
 const H5P = {};
 /**
  * H5P Joubel UI library.

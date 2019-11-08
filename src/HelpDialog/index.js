@@ -1,8 +1,10 @@
 /**
  * Class responsible for creating a help text dialog
  */
-const jquery = require('jquery');
-const { EventDispatcher } = require('../h5p-event-dispatcher');
+import $ from 'jquery';
+import { EventDispatcher } from '../h5p-event-dispatcher';
+
+import './styles.css';
 
 var numInstances = 0;
 /**

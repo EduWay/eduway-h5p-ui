@@ -1,7 +1,9 @@
 /**
  * Class responsible for creating speech bubbles
  */
-const $ = require('jquery');
+import $ from 'jquery';
+
+import './styles.css';
 
 var $currentSpeechBubble;
 var $currentContainer;

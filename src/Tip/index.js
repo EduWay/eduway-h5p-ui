@@ -1,4 +1,6 @@
-const $ = require('jquery');
+import $ from 'jquery';
+
+import './styles.css';
 
 const $conv = $('<div/>');
 /**

@@ -1,7 +1,8 @@
 /**
  * Creates a new tip
  */
-const $ = require('jquery');
+import $ from 'jquery';
+import './style.css';
 
 function SimpleRoundedButton(text) {
   var $simpleRoundedButton = $('<div>', {

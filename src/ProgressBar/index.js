@@ -1,5 +1,6 @@
-const jquery = require('jquery');
-const { EventDispatcher } = require('../h5p-event-dispatcher');
+import $ from 'jquery';
+import { EventDispatcher } from '../h5p-event-dispatcher';
+import './style.css';;
 
 /**
  * Joubel progressbar class

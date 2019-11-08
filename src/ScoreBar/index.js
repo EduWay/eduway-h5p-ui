@@ -1,7 +1,9 @@
 /**
  * @module
  */
-const $ = require('jquery');
+import $ from 'jquery';
+
+import './style.css';
 
 /* Need to use an id for the star SVG since that is the only way to reference
    SVG filters  */

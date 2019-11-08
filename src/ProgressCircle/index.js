@@ -1,7 +1,8 @@
 /**
  * Class responsible for creating a circular progress bar
  */
-const jquery = require('jquery');
+import jquery from 'jquery';
+import './style.css';
 
 /**
  * Constructor for the Progress Circle
