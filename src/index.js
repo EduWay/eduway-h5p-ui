@@ -1,12 +1,12 @@
-const HelpTextDialog = require('./HelpDialog');
-const MessageDialog = require('./MessageDialog');
-const ProgressCircle = require('./ProgressCircle');
-const ProgressBar = require('./ProgressBar');
-const ScoreBar = require('./ScoreBar');
-const Slider = require('./Slider');
-const SpeechBubble = require('./SpeechBubble');
-const Throbber = require('./Throbber');
-const Tip = require('./Tip');
+import HelpTextDialog from './components/HelpDialog';
+import MessageDialog from './components/MessageDialog';
+import ProgressCircle from './components/ProgressCircle';
+import ProgressBar from './components/ProgressBar';
+import ScoreBar from'./components/ScoreBar';
+import Slider from './components/Slider';
+import SpeechBubble from './components/SpeechBubble';
+import Throbber from './components/Throbber';
+import Tip from './components/Tip';
 
 import './styles.css';
 import './icons.css';
