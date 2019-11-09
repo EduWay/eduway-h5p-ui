@@ -6,7 +6,7 @@ import $ from 'jquery';
 /**
  * @class
  */
-Transition = {};
+const Transition = {};
 
 /**
  * @private
@@ -34,7 +34,6 @@ Transition.cache = [];
  * @return {string}      Vendor specific property name
  */
 Transition.getVendorPropertyName = function (prop) {
-
   if (Transition.cache[prop] !== undefined) {
     return Transition.cache[prop];
   }

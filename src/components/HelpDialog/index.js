@@ -2,7 +2,7 @@
  * Class responsible for creating a help text dialog
  */
 import $ from 'jquery';
-import EventDispatcher from '../../EventDispatcher';
+import { EventDispatcher } from 'eduway-h5p-lib';
 
 import './styles.css';
 

@@ -26,4 +26,4 @@ function SimpleRoundedButton(text) {
   return $simpleRoundedButton;
 }
 
-return SimpleRoundedButton;
+export default SimpleRoundedButton;

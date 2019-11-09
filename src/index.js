@@ -5,14 +5,14 @@
  * other libraries
  * @module
  */
-export * from './EventDispatcher';
-export * from './Transition';
+export { default as Transition } from './Transition';
 
 import HelpTextDialog from './components/HelpDialog';
 import MessageDialog from './components/MessageDialog';
 import ProgressCircle from './components/ProgressCircle';
 import ProgressBar from './components/ProgressBar';
 import ScoreBar from'./components/ScoreBar';
+import SimpleRoundedButton from './components/SimpleRoundedButton';
 import Slider from './components/Slider';
 import SpeechBubble from './components/SpeechBubble';
 import Throbber from './components/Throbber';
@@ -32,7 +32,7 @@ function UI() {}
 
 /**
  * Create a tip icon
- * @method H5P.UI.createTip
+ * @method UI.createTip
  * @param  {string}  text   The textual tip
  * @param  {Object}  params Parameters
  * @return {Tip}
@@ -43,8 +43,8 @@ UI.createTip = function (text, params) {
 
 /**
  * Create message dialog
- * @method H5P.UI.createMessageDialog
- * @param  {H5P.jQuery}               $container The dom container
+ * @method UI.createMessageDialog
+ * @param  {jQuery}               $container The dom container
  * @param  {string}                   message    The message
  * @return {MessageDialog}
  */
@@ -54,11 +54,11 @@ UI.createMessageDialog = function ($container, message) {
 
 /**
  * Create help text dialog
- * @method H5P.UI.createHelpTextDialog
+ * @method UI.createHelpTextDialog
  * @param  {string}             header  The textual header
  * @param  {string}             message The textual message
  * @param  {string}             closeButtonTitle The title for the close button
- * @return {H5P.JoubelHelpTextDialog}
+ * @return {HelpTextDialog}
  */
 UI.createHelpTextDialog = function (header, message, closeButtonTitle) {
   return new HelpTextDialog(header, message, closeButtonTitle);
@@ -66,12 +66,12 @@ UI.createHelpTextDialog = function (header, message, closeButtonTitle) {
 
 /**
  * Create progress circle
- * @method H5P.UI.createProgressCircle
+ * @method UI.createProgressCircle
  * @param  {number}             number          The progress (0 to 100)
  * @param  {string}             progressColor   The progress color in hex value
  * @param  {string}             fillColor       The fill color in hex value
  * @param  {string}             backgroundColor The background color in hex value
- * @return {H5P.JoubelProgressCircle}
+ * @return {JoubelProgressCircle}
  */
 UI.createProgressCircle = function (number, progressColor, fillColor, backgroundColor) {
   return new ProgressCircle(number, progressColor, fillColor, backgroundColor);
@@ -79,7 +79,7 @@ UI.createProgressCircle = function (number, progressColor, fillColor, background
 
 /**
  * Create throbber for loading
- * @method H5P.UI.createThrobber
+ * @method UI.createThrobber
  * @return {Throbber}
  */
 UI.createThrobber = function () {
@@ -88,17 +88,17 @@ UI.createThrobber = function () {
 
 /**
  * Create simple rounded button
- * @method H5P.UI.createSimpleRoundedButton
+ * @method UI.createSimpleRoundedButton
  * @param  {string}                  text The button label
- * @return {H5P.SimpleRoundedButton}
+ * @return {SimpleRoundedButton}
  */
 UI.createSimpleRoundedButton = function (text) {
-  return new H5P.SimpleRoundedButton(text);
+  return new SimpleRoundedButton(text);
 };
 
 /**
  * Create Slider
- * @method H5P.UI.createSlider
+ * @method UI.createSlider
  * @param  {Object} [params] Parameters
  * @return {Slider}
  */
@@ -108,7 +108,7 @@ UI.createSlider = function (params) {
 
 /**
  * Create Score Bar
- * @method H5P.UI.createScoreBar
+ * @method UI.createScoreBar
  * @param  {number=}       maxScore The maximum score
  * @param {string} [label] Makes it easier for readspeakers to identify the scorebar
  * @return {ScoreBar}
@@ -119,7 +119,7 @@ UI.createScoreBar = function (maxScore, label, helpText, scoreExplanationButtonL
 
 /**
  * Create ProgressBar
- * @method H5P.UI.createProgressbar
+ * @method UI.createProgressbar
  * @param  {number=}       numSteps The total numer of steps
  * @param {Object} [options] Additional options
  * @param {boolean} [options.disableAria] Disable readspeaker assistance
@@ -164,6 +164,8 @@ UI.createButton = function(params) {
  * the focused element is out of view. This varies dependening on the elements
  * of the parent frame.
  */
+//TODO
+/*
 if (H5P.isFramed && !H5P.hasiOSiframeScrollFix &&
     /iPad|iPhone|iPod/.test(navigator.userAgent)) {
   H5P.hasiOSiframeScrollFix = true;
@@ -190,5 +192,6 @@ if (H5P.isFramed && !H5P.hasiOSiframeScrollFix &&
     }
   };
 }
+*/
 
 export default UI;

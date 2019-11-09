@@ -19,7 +19,7 @@ var iDevice = navigator.userAgent.match(/iPod|iPhone|iPad/g) ? true : false;
 /**
  * Creates a new speech bubble
  *
- * @param {H5P.jQuery} $container The speaking object
+ * @param {jQuery} $container The speaking object
  * @param {string} text The text to display
  * @param {number} maxWidth The maximum width of the bubble
  * @return {SpeechBubble}
@@ -85,28 +85,33 @@ function SpeechBubble($container, text, maxWidth) {
   position($currentSpeechBubble, $currentContainer, maxWidth, $tail, $innerTail);
 
   // Handle click to close
-  H5P.$body.on('mousedown.speechBubble', handleOutsideClick);
+  $body = $(document.body);
+  $body.on('mousedown.speechBubble', handleOutsideClick);
 
   // Handle window resizing
-  H5P.$window.on('resize', '', handleResize);
+  $window = $(window);
+  $window.on('resize', '', handleResize);
 
   // Handle clicks when inside IV which blocks bubbling.
   $container.parents('.h5p-dialog')
     .on('mousedown.speechBubble', handleOutsideClick);
 
   if (iDevice) {
-    H5P.$body.css('cursor', 'pointer');
+    $body.css('cursor', 'pointer');
   }
 
   return this;
 }
 
 // Remove speechbubble if it belongs to a dom element that is about to be hidden
+// TODO
+/*
 H5P.externalDispatcher.on('domHidden', function (event) {
   if ($currentSpeechBubble !== undefined && event.data.$dom.find($currentContainer).length !== 0) {
     remove();
   }
 });
+*/
 
 /**
  * Returns the closest h5p container for the given DOM element.
@@ -332,8 +337,8 @@ function tailCSS(direction, position) {
  * outer element.
  * Width/height of the elements is included as a convenience.
  *
- * @param {H5P.jQuery} $outer
- * @param {H5P.jQuery} $inner
+ * @param {jQuery} $outer
+ * @param {jQuery} $inner
  * @return {object} Position offset
  */
 function getOffsetBetween($outer, $inner) {

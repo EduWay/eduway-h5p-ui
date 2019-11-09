@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import EventDispatcher from '../../EventDispatcher';
+import { EventDispatcher } from 'eduway-h5p-lib';
 import Transition from '../../Transition';
 
 import './style.css';
