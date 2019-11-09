@@ -6,6 +6,7 @@
  * @module
  */
 export { default as Transition } from './Transition';
+import $ from 'jquery';
 
 import HelpTextDialog from './components/HelpDialog';
 import MessageDialog from './components/MessageDialog';
