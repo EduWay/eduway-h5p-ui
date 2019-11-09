@@ -5,6 +5,9 @@
  * other libraries
  * @module
  */
+export * from './EventDispatcher';
+export * from './Transition';
+
 import HelpTextDialog from './components/HelpDialog';
 import MessageDialog from './components/MessageDialog';
 import ProgressCircle from './components/ProgressCircle';
