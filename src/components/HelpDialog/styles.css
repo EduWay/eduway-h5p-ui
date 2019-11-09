@@ -59,7 +59,7 @@
 }
 
 .joubel-help-text-remove:before {
-  font-family: 'H5PFontAwesome4';
+  font-family: 'FontAwesome';
   content: '\f00d';
   font-size: 1.3em;
   right: 0em;
