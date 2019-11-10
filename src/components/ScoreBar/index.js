@@ -3,7 +3,7 @@
  */
 import $ from 'jquery';
 
-import './style.css';
+import './styles.css';
 
 /* Need to use an id for the star SVG since that is the only way to reference
    SVG filters  */
