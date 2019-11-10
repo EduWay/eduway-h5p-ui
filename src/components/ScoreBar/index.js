@@ -197,7 +197,7 @@ function ScoreBar(maxScore, label, helpText, scoreExplanationButtonLabel) {
         width: ((self.score / self.maxScore) * 100) + '%'
       });
 
-      H5P.Transition.onTransitionEnd(self.$progress, function () {
+      Transition.onTransitionEnd(self.$progress, function () {
         // If fullscore fill the star and start the animation
         self.$scoreBar.toggleClass('h5p-joubelui-score-bar-full-score', self.score === self.maxScore);
         self.$scoreBar.toggleClass('h5p-joubelui-score-bar-animation-active', self.score === self.maxScore);
