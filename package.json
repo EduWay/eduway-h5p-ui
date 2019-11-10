@@ -35,6 +35,6 @@
     "font-awesome": "^4.7.0"
   },
   "dependencies": {
-    "eduway-h5p-lib": "git+https://git@github.com/EduWay/eduway-h5p-lib.git"
+    "eduway-h5p-lib": "github:EduWay/eduway-h5p-lib"
   }
 }
