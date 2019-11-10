@@ -28,10 +28,10 @@
     "style-loader": "^1.0.0"
   },
   "peerDependencies": {
-    "jquery": "^1.12.4"
+    "jquery": "^1.12.4",
+    "font-awesome": "^4.7.0"
   },
   "dependencies": {
-    "eduway-h5p-lib": "git+ssh://git@github.com/EduWay/eduway-h5p-lib.git",
-    "jquery": "^1.12.4"
+    "eduway-h5p-lib": "git+ssh://git@github.com/EduWay/eduway-h5p-lib.git"
   }
 }
