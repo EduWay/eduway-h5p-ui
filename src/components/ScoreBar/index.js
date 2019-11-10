@@ -3,6 +3,7 @@
  */
 import $ from 'jquery';
 
+import Transition from '../../Transition';
 import './styles.css';
 
 /* Need to use an id for the star SVG since that is the only way to reference
